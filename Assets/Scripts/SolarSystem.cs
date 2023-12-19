@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class SolarSystem : MonoBehaviour
@@ -78,6 +79,11 @@ public class SolarSystem : MonoBehaviour
 		foreach (var solarSystemObject in solarSystemObjects)
 		{
 			solarSystemObject.Rotate();
+		}
+
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			SceneManager.LoadScene("MainMenu");
 		}
 	}
 

@@ -77,7 +77,7 @@ public class Spaceshp : MonoBehaviour
 
 			float angleX = Input.GetAxis("Mouse Y") * rotateCameraSpeed;
 			float localRotationXOfCamera = Camera.main.transform.localEulerAngles.x;
-			print("Local rotation of camera x: " + localRotationXOfCamera);
+			// print("Local rotation of camera x: " + localRotationXOfCamera);
 			if (localRotationXOfCamera + angleX >= 0 && localRotationXOfCamera + angleX <= 70)
 			{
 				Camera.main.transform.RotateAround(transform.position, Camera.main.transform.right, angleX);
