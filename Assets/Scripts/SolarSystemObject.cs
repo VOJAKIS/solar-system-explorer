@@ -57,11 +57,18 @@ public class SolarSystemObject
 		wrapper.transform.position = defaultPosition;
 
 		sun = GameObject.Find("Slnko");
+
+		sphere.GetComponent<Renderer>().receiveShadows = false;
 	}
 
 	public GameObject getSphere()
 	{
 		return sphere;
+	}
+
+	public string getName()
+	{
+		return name;
 	}
 
 	public GameObject getWrapper()

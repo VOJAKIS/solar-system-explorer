@@ -7,13 +7,13 @@ using TMPro;
 
 public class SolarSystem : MonoBehaviour
 {
-
 	public GameObject directionalLight;
 
 	public GameObject saturnRings;
 
 	public GameObject factSheetWrapper;
 	public TextMeshProUGUI factSheetText;
+	public TextMeshProUGUI factSheetTitle;
 	public Button factSheetShowButton;
 	public Button factSheetHideButton;
 
@@ -48,15 +48,14 @@ public class SolarSystem : MonoBehaviour
 			solarSystemObject.GenerateSphere(pos);
 		}
 
-		GameObject firstGameObjectFound = GameObject.Find("Zem");
-		print(firstGameObjectFound);
+		// Moving the spaceship to earth
+		GameObject firstGameObjectFound = Earth.getWrapper();
 		player.transform.SetParent(firstGameObjectFound.transform);
 
-
+		// Traverse
 		closerToSunButton.onClick.AddListener(MoveSpaceshipCloserToSun);
 		fartherFromSunButton.onClick.AddListener(MoveSpaceshipFartherFromSun);
 		travellingErrorText.enabled = false;
-
 		homeButton.onClick.AddListener(MoveSpaceshipToEarth);
 
 		// Directional light
@@ -95,12 +94,13 @@ public class SolarSystem : MonoBehaviour
 			}
 		}
 
-		if (index <= 0)
+		if (index < 0)
 		{
 			return;
 		}
 
 		factSheetText.text = solarSystemObjects[index].getFact();
+		factSheetTitle.text = solarSystemObjects[index].getName();
 	}
 
 	void ShowFactSheet()

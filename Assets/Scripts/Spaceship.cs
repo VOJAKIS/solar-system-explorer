@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Spaceshp : MonoBehaviour
 {
 	public float traverseSpeed = 50;
 	public int rotateCameraSpeed = 10;
+
+	public Slider traverseSpeedSlider;
 
 	private int zoomMultiplier = 20;
 	private int zoomLevelCurrent = 3;
@@ -15,7 +18,10 @@ public class Spaceshp : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-
+		this.traverseSpeed = traverseSpeedSlider.value;
+		traverseSpeedSlider.onValueChanged.AddListener(delegate {
+			ChangeTraverseSpeed();
+		});
 	}
 
 	// Update is called once per frame
@@ -64,10 +70,23 @@ public class Spaceshp : MonoBehaviour
 
 	void RotateCamera()
 	{
+		// Clip to rotationX -60 and 24
 		if (Input.GetMouseButton(1))
 		{
 			Camera.main.transform.RotateAround(transform.position, Vector3.up, Input.GetAxis("Mouse X") * rotateCameraSpeed / 2);
-			// Camera.main.transform.RotateAround(transform.position, Camera.main.transform.right, Input.GetAxis("Mouse Y") * rotateCameraSpeed);
+
+			float angleX = Input.GetAxis("Mouse Y") * rotateCameraSpeed;
+			float localRotationXOfCamera = Camera.main.transform.localEulerAngles.x;
+			print("Local rotation of camera x: " + localRotationXOfCamera);
+			if (localRotationXOfCamera + angleX >= 0 && localRotationXOfCamera + angleX <= 70)
+			{
+				Camera.main.transform.RotateAround(transform.position, Camera.main.transform.right, angleX);
+			}
 		}
+	}
+
+	void ChangeTraverseSpeed()
+	{
+		this.traverseSpeed = traverseSpeedSlider.value;
 	}
 }

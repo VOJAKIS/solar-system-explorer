@@ -27,9 +27,7 @@ public class Planet : MonoBehaviour
 	void OnMouseDown()
 	{
 		// https://docs.unity3d.com/ScriptReference/GameObject.FindWithTag.html
-		GameObject player = GameObject.FindWithTag("Player");
 		player.transform.SetParent(transform.parent);
-		print(transform.parent);
 	}
 
 	void OnMouseExit()
