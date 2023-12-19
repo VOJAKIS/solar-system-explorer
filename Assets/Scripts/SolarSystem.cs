@@ -10,6 +10,13 @@ public class SolarSystem : MonoBehaviour
 
 	public GameObject directionalLight;
 
+	public GameObject saturnRings;
+
+	public GameObject factSheetWrapper;
+	public TextMeshProUGUI factSheetText;
+	public Button factSheetShowButton;
+	public Button factSheetHideButton;
+
 	[SerializeField]
 	public SolarSystemObject Sun;
 
@@ -52,7 +59,18 @@ public class SolarSystem : MonoBehaviour
 
 		homeButton.onClick.AddListener(MoveSpaceshipToEarth);
 
+		// Directional light
 		directionalLight.transform.SetParent(Sun.getWrapper().transform);
+		directionalLight.SetActive(true);
+
+		// Fact sheet
+		factSheetWrapper.SetActive(false);
+		factSheetHideButton.onClick.AddListener(HideFactSheet);
+		factSheetText.text = Earth.getFact();
+		factSheetShowButton.onClick.AddListener(ShowFactSheet);
+
+		// Saturn rings
+		AddSaturnRings();
 	}
 
 	// Update is called once per frame
@@ -62,6 +80,40 @@ public class SolarSystem : MonoBehaviour
 		{
 			solarSystemObject.Rotate();
 		}
+	}
+
+	void UpdateFactSheet()
+	{
+		string playersParentName = player.transform.parent.name;
+		int index = -1;
+		for (int i = 0; i < solarSystemObjects.Length; i++)
+		{
+			if (playersParentName == solarSystemObjects[i].name)
+			{
+				index = i;
+				break;
+			}
+		}
+
+		if (index <= 0)
+		{
+			return;
+		}
+
+		factSheetText.text = solarSystemObjects[index].getFact();
+	}
+
+	void ShowFactSheet()
+	{
+		factSheetShowButton.gameObject.SetActive(false);
+		factSheetWrapper.SetActive(true);
+		UpdateFactSheet();
+	}
+
+	void HideFactSheet()
+	{
+		factSheetWrapper.SetActive(false);
+		factSheetShowButton.gameObject.SetActive(true);
 	}
 
 	void MoveSpaceshipToEarth()
@@ -118,7 +170,7 @@ public class SolarSystem : MonoBehaviour
 	void ShowAndHideErrorText()
 	{
 		if (travellingErrorText.enabled) return;
-		
+
 		StartCoroutine(ShowAndHideErrorTextAfterSeconds(hideErrorTextAfterSeconds));
 	}
 
@@ -132,5 +184,16 @@ public class SolarSystem : MonoBehaviour
 	void MoveShaceshipToParent(Transform parent)
 	{
 		player.transform.SetParent(parent);
+		UpdateFactSheet();
+	}
+
+	void AddSaturnRings()
+	{
+		saturnRings.transform.SetParent(Saturn.getSphere().transform);
+		saturnRings.transform.localPosition = new Vector3(0, 0, 0);
+		saturnRings.transform.localScale = new Vector3(1, 1, 1);
+		// saturnRings.transform.rotation.z = 0;
+		// saturnRings.transform.Rotate(0, 0, 0, Space.World);
+		saturnRings.transform.localRotation = Quaternion.identity;
 	}
 }

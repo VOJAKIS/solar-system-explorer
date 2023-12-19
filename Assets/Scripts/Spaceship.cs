@@ -8,9 +8,9 @@ public class Spaceshp : MonoBehaviour
 	public int rotateCameraSpeed = 10;
 
 	private int zoomMultiplier = 20;
-	private int zoomLevelCurrent = 1;
+	private int zoomLevelCurrent = 3;
 	private int zoomLevelMaximum = 25;
-	private int zoomLevelMinimum = 5;
+	private int zoomLevelMinimum = 1;
 
 	// Start is called before the first frame update
 	void Start()
@@ -43,7 +43,7 @@ public class Spaceshp : MonoBehaviour
 	// https://discussions.unity.com/t/how-do-i-make-the-camera-zoom-in-and-out-with-the-mouse-wheel/36739/2
 	void MouseZoomInAndOut()
 	{
-		float scrollWheelChange = Input.GetAxis("Mouse ScrollWheel");           //This little peece of code is written by JelleWho https://github.com/jellewie
+		float scrollWheelChange = Input.GetAxis("Mouse ScrollWheel");           //This little peace of code is written by JelleWho https://github.com/jellewie
 
 		//If the scrollwheel has changed
 		if (scrollWheelChange != 0)
