@@ -28,6 +28,8 @@ public class SolarSystem : MonoBehaviour
 
 	public GameObject player;
 
+	public Canvas UI;
+
 	[SerializeField]
 	public SolarSystemObject Sun;
 
@@ -75,6 +77,10 @@ public class SolarSystem : MonoBehaviour
 
 		// Saturn rings
 		AddSaturnRings();
+
+		// HideUI();
+		float seconds = 5;
+		StartCoroutine(DisplayUIAfterSeconds(seconds));
 	}
 
 	// Update is called once per frame
@@ -97,6 +103,25 @@ public class SolarSystem : MonoBehaviour
 		}
 
 		UpdateFactSheet();
+	}
+
+	IEnumerator DisplayUIAfterSeconds(float seconds)
+	{
+		HideUI();
+		yield return new WaitForSeconds(seconds);
+		ShowUI();
+	}
+
+	void ShowUI()
+	{
+		// UI.SetActive(true);
+		UI.enabled = true;
+	}
+
+	void HideUI()
+	{
+		// UI.SetActive(false);
+		UI.enabled = false;
 	}
 
 	void UpdateFactSheet()

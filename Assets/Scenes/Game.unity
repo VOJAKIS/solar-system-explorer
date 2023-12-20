@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.0001198412, g: 0.00041174237, b: 0.00028966847, a: 1}
+  m_IndirectSpecularColor: {r: 0.0002095896, g: 0.0007170102, b: 0.00052093057, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -596,9 +596,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2115589068}
   m_Direction: 0
   m_MinValue: 100
-  m_MaxValue: 10000
+  m_MaxValue: 15000
   m_WholeNumbers: 1
-  m_Value: 1968
+  m_Value: 1000
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1983,7 +1983,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1e+20
+  far clip plane: 1e+16
   field of view: 90
   orthographic: 0
   orthographic size: 5
@@ -4091,6 +4091,7 @@ MonoBehaviour:
   travellingErrorText: {fileID: 1060648536}
   homeButton: {fileID: 1547835600}
   player: {fileID: 503026612}
+  UI: {fileID: 1167958949}
   Sun:
     material: {fileID: 2100000, guid: fe4ed057b0ec3874497bc346bdefac0c, type: 2}
     name: Slnko
@@ -4492,7 +4493,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1134714066672644336, guid: e30da6a6d37d33a4db54184e7dab7439, type: 3}
+  - {fileID: 2100000, guid: fd55cff14847a7c4fbac631fc3a9f627, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
