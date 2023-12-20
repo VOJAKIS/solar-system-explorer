@@ -13,8 +13,10 @@ public class Moon
 	[SerializeField] private float obliquityToOrbitInDegrees;
 	[SerializeField] private float meanOrbitalVelocityInKilometersPerSecond;
 
-	private GameObject planetToRotateAround;
 	[SerializeField] private float distanceFromPlanetToRotateAroundInKilomters;
+	[SerializeField] private string fact;
+
+	private GameObject planetToRotateAround;
 
 	private float scaleFactor = 25f;
 	private GameObject sphere;
@@ -75,5 +77,10 @@ public class Moon
 	public string getName()
 	{
 		return name;
+	}
+
+	public string getFact()
+	{
+		return fact;
 	}
 }

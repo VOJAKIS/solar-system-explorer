@@ -84,7 +84,7 @@ public class SolarSystem : MonoBehaviour
 		{
 			if (solarSystemObject != Sun)
 			{
-				print(solarSystemObject == Sun);
+				// print(solarSystemObject == Sun);
 				solarSystemObject.RotateAroundSun();
 			}
 
@@ -101,23 +101,60 @@ public class SolarSystem : MonoBehaviour
 	void UpdateFactSheet()
 	{
 		string playersParentName = player.transform.parent.name;
-		int index = -1;
-		for (int i = 0; i < solarSystemObjects.Length; i++)
+		// int index = -1;
+
+		SolarSystemObject currentSolarSystemObject = null;
+		Moon currentMoon = null;
+
+		foreach (SolarSystemObject solarSystemObject in solarSystemObjects)
 		{
-			if (playersParentName == solarSystemObjects[i].name)
+			if (playersParentName == solarSystemObject.getName())
 			{
-				index = i;
+				currentSolarSystemObject = solarSystemObject;
 				break;
+			}
+
+			foreach (Moon moon in solarSystemObject.getMoons())
+			{
+				if (playersParentName == moon.getName())
+				{
+					currentMoon = moon;
+					break;
+				}
 			}
 		}
 
-		if (index < 0)
+		// for (int i = 0; i < solarSystemObjects.Length; i++)
+		// {
+		// 	if (playersParentName == solarSystemObjects[i].name)
+		// 	{
+		// 		index = i;
+		// 		currentSolarSystemObject = solarSystemObjects[i];
+		// 		break;
+		// 	}
+
+		// 	foreach (Moon moon in solarSystemObjects[i].getMoons())
+		// 	{
+		// 		if (playersParentName == moon.getName())
+		// 		{
+		// 			index = i;
+		// 			currentMoon = moon;
+		// 			break;
+		// 		}
+		// 	}
+		// }
+
+		if (currentMoon != null)
 		{
-			return;
+			factSheetTitle.text = "Mesiac: " + currentMoon.getName();
+			factSheetText.text = currentMoon.getFact();
 		}
 
-		factSheetText.text = solarSystemObjects[index].getFact();
-		factSheetTitle.text = solarSystemObjects[index].getName();
+		if (currentSolarSystemObject != null)
+		{
+			factSheetTitle.text = currentSolarSystemObject.getName();
+			factSheetText.text = currentSolarSystemObject.getFact();
+		}
 	}
 
 	void ShowFactSheet()
