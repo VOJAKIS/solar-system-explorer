@@ -84,7 +84,6 @@ public class SolarSystem : MonoBehaviour
 		{
 			if (solarSystemObject != Sun)
 			{
-				// print(solarSystemObject == Sun);
 				solarSystemObject.RotateAroundSun();
 			}
 
@@ -96,13 +95,13 @@ public class SolarSystem : MonoBehaviour
 		{
 			SceneManager.LoadScene("MainMenu");
 		}
+
+		UpdateFactSheet();
 	}
 
 	void UpdateFactSheet()
 	{
 		string playersParentName = player.transform.parent.name;
-		// int index = -1;
-
 		SolarSystemObject currentSolarSystemObject = null;
 		Moon currentMoon = null;
 
@@ -124,29 +123,9 @@ public class SolarSystem : MonoBehaviour
 			}
 		}
 
-		// for (int i = 0; i < solarSystemObjects.Length; i++)
-		// {
-		// 	if (playersParentName == solarSystemObjects[i].name)
-		// 	{
-		// 		index = i;
-		// 		currentSolarSystemObject = solarSystemObjects[i];
-		// 		break;
-		// 	}
-
-		// 	foreach (Moon moon in solarSystemObjects[i].getMoons())
-		// 	{
-		// 		if (playersParentName == moon.getName())
-		// 		{
-		// 			index = i;
-		// 			currentMoon = moon;
-		// 			break;
-		// 		}
-		// 	}
-		// }
-
 		if (currentMoon != null)
 		{
-			factSheetTitle.text = "Mesiac: " + currentMoon.getName();
+			factSheetTitle.text = currentMoon.getName();
 			factSheetText.text = currentMoon.getFact();
 		}
 
