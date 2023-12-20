@@ -19,7 +19,8 @@ public class Spaceshp : MonoBehaviour
 	void Start()
 	{
 		this.traverseSpeed = traverseSpeedSlider.value;
-		traverseSpeedSlider.onValueChanged.AddListener(delegate {
+		traverseSpeedSlider.onValueChanged.AddListener(delegate
+		{
 			ChangeTraverseSpeed();
 		});
 	}
@@ -36,14 +37,20 @@ public class Spaceshp : MonoBehaviour
 	void MoveTowardsCurrentParent()
 	{
 		Transform parent = transform.parent;
-
-		Vector3 currentTargetPosition = new Vector3(transform.position.x, parent.transform.Find("Sphere").transform.localScale.y, parent.position.z);
+		if (parent == null) {
+			print("parent is null!");
+			return;
+		}
+		string sphereObjectOfMainParent = parent.name + "/Sphere";
+		float y = GameObject.Find(sphereObjectOfMainParent).transform.localScale.y;
+		Vector3 currentTargetPosition = new Vector3(parent.position.x, y, parent.position.z);
 		Vector3 moveTowards = Vector3.MoveTowards(transform.position, currentTargetPosition, traverseSpeed * Time.deltaTime);
 
-		transform.position = moveTowards;
-
-		// float step = rotateCameraSpeed * Time.deltaTime; // calculate distance to move
-		// transform.position = Vector3.MoveTowards(transform.position, parent.position, step);
+		print(moveTowards);
+		if (moveTowards != null)
+		{
+			transform.position = moveTowards;
+		}
 	}
 
 	// https://discussions.unity.com/t/how-do-i-make-the-camera-zoom-in-and-out-with-the-mouse-wheel/36739/2

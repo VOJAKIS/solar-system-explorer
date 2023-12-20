@@ -6,25 +6,16 @@ using UnityEngine;
 [Serializable]
 public class SolarSystemObject
 {
-	[SerializeField]
-	public Material material;
-
-	[SerializeField]
-	public string name;
-
-	[SerializeField]
-	public float diameterInKilometers;
-
-	[SerializeField]
-	public float distanceFromSunInKilometers;
-
-	[SerializeField]
-	public float orbitalVelocityInKilometersPerSecond;
-
-	[SerializeField]
-	public float obliquityToOrbitInDegrees;
+	[SerializeField] public Material material;
+	[SerializeField] public string name;
+	[SerializeField] public float diameterInKilometers;
+	[SerializeField] public float distanceFromSunInKilometers;
+	[SerializeField] public float orbitalVelocityInKilometersPerSecond;
+	[SerializeField] public float obliquityToOrbitInDegrees;
 
 	public string fact;
+
+	public List<Moon> moons;
 
 	private float scaleFactor = 25f;
 	private GameObject sphere;
@@ -41,17 +32,11 @@ public class SolarSystemObject
 
 		sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
 		sphere.transform.parent = wrapper.transform;
-		// sphere.GetComponent<SphereCollider>().radius = diameterInKilometers / 100000;
-		// sphere.GetComponent<SphereCollider>().radius = 1;
-
 		sphere.GetComponent<MeshRenderer>().material = material;
-		sphere.transform.localScale =  new Vector3(0.1f, 0.1f, 0.1f) * (diameterInKilometers / scaleFactor);
+		sphere.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f) * (diameterInKilometers / scaleFactor);
 		sphere.transform.Rotate(Vector3.forward, obliquityToOrbitInDegrees);
 		sphere.AddComponent<Planet>();
 		sphere.GetComponent<Planet>().setPlayer(GameObject.FindWithTag("Player"));
-
-
-		sphere.transform.Rotate(Vector3.forward, obliquityToOrbitInDegrees);
 		defaultPosition = new Vector3(0.0f, 0.1f, distanceFromSunInKilometers * scaleFactor);
 
 		wrapper.transform.position = defaultPosition;
@@ -59,6 +44,19 @@ public class SolarSystemObject
 		sun = GameObject.Find("Slnko");
 
 		sphere.GetComponent<Renderer>().receiveShadows = false;
+
+		// Generate moons
+		InitializeMoons();
+	}
+
+	private void InitializeMoons()
+	{
+		foreach (Moon moon in moons)
+		{
+			moon.setParentWrapper(wrapper);
+			moon.setScaleFactor(scaleFactor);
+			moon.initialize();
+		}
 	}
 
 	public GameObject getSphere()
@@ -83,9 +81,29 @@ public class SolarSystemObject
 
 	public void Rotate()
 	{
-		sphere.transform.Rotate(Vector3.up, -orbitalVelocityInKilometersPerSecond * Time.deltaTime);
+		sphere.transform.Rotate(Vector3.up, -orbitalVelocityInKilometersPerSecond * Time.deltaTime / scaleFactor);
+	}
 
-		// if (name != "Slnko")
-		// wrapper.transform.RotateAround(sun.transform.position, Vector3.up, Time.deltaTime * orbitalVelocityInKilometersPerSecond);
+	public void RotateAroundSun()
+	{
+		wrapper.transform.RotateAround(sun.transform.position, Vector3.up, Time.deltaTime * (-orbitalVelocityInKilometersPerSecond) / scaleFactor);
+	}
+
+	public void RotateMoons()
+	{
+		foreach (Moon moon in moons)
+		{
+			moon.Rotate();
+		}
+	}
+
+	public List<Moon> getMoons()
+	{
+		return moons;
+	}
+
+	public void setScaleFactor(float scaleFactor)
+	{
+		this.scaleFactor = scaleFactor;
 	}
 }

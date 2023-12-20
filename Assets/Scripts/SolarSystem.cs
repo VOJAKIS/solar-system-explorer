@@ -8,6 +8,8 @@ using TMPro;
 
 public class SolarSystem : MonoBehaviour
 {
+	public float scaleFactor = 50.0f;
+
 	public GameObject directionalLight;
 
 	public GameObject saturnRings;
@@ -17,6 +19,14 @@ public class SolarSystem : MonoBehaviour
 	public TextMeshProUGUI factSheetTitle;
 	public Button factSheetShowButton;
 	public Button factSheetHideButton;
+
+	public Button closerToSunButton;
+	public Button fartherFromSunButton;
+	public TextMeshProUGUI travellingErrorText;
+	private int hideErrorTextAfterSeconds = 4;
+	public Button homeButton;
+
+	public GameObject player;
 
 	[SerializeField]
 	public SolarSystemObject Sun;
@@ -29,29 +39,22 @@ public class SolarSystem : MonoBehaviour
 	public SolarSystemObject Saturn;
 	public SolarSystemObject Uranus;
 	public SolarSystemObject Neptune;
+	public SolarSystemObject Pluto;
 
 	private SolarSystemObject[] solarSystemObjects;
 
-	public Button closerToSunButton;
-	public Button fartherFromSunButton;
-	public TextMeshProUGUI travellingErrorText;
-	private int hideErrorTextAfterSeconds = 4;
-	public Button homeButton;
-
-	public GameObject player;
-
 	void Start()
 	{
-		solarSystemObjects = new SolarSystemObject[9] { Sun, Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune };
+		solarSystemObjects = new SolarSystemObject[] { Sun, Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto };
 		foreach (SolarSystemObject solarSystemObject in solarSystemObjects)
 		{
 			Vector3 pos = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
+			solarSystemObject.setScaleFactor(scaleFactor);
 			solarSystemObject.GenerateSphere(pos);
 		}
 
 		// Moving the spaceship to earth
-		GameObject firstGameObjectFound = Earth.getWrapper();
-		player.transform.SetParent(firstGameObjectFound.transform);
+		player.transform.SetParent(Earth.getWrapper().transform);
 
 		// Traverse
 		closerToSunButton.onClick.AddListener(MoveSpaceshipCloserToSun);
@@ -61,6 +64,7 @@ public class SolarSystem : MonoBehaviour
 
 		// Directional light
 		directionalLight.transform.SetParent(Sun.getWrapper().transform);
+		directionalLight.transform.localPosition = Vector3.zero;
 		directionalLight.SetActive(true);
 
 		// Fact sheet
@@ -78,7 +82,14 @@ public class SolarSystem : MonoBehaviour
 	{
 		foreach (var solarSystemObject in solarSystemObjects)
 		{
+			if (solarSystemObject != Sun)
+			{
+				print(solarSystemObject == Sun);
+				solarSystemObject.RotateAroundSun();
+			}
+
 			solarSystemObject.Rotate();
+			solarSystemObject.RotateMoons();
 		}
 
 		if (Input.GetKeyDown(KeyCode.Escape))
@@ -139,6 +150,15 @@ public class SolarSystem : MonoBehaviour
 				index = i;
 				break;
 			}
+
+			foreach (Moon moon in solarSystemObjects[i].getMoons())
+			{
+				if (playersParentName == moon.getName())
+				{
+					index = i;
+					break;
+				}
+			}
 		}
 
 		if (index <= 0)
@@ -161,6 +181,15 @@ public class SolarSystem : MonoBehaviour
 			{
 				index = i;
 				break;
+			}
+
+			foreach (Moon moon in solarSystemObjects[i].getMoons())
+			{
+				if (playersParentName == moon.getName())
+				{
+					index = i;
+					break;
+				}
 			}
 		}
 

@@ -25,8 +25,8 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubtractiveShadowColor: {r: 0.754717, g: 0.754717, b: 0.754717, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: dba087d9a63125f429ec73ca66bd8808, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.0001198412, g: 0.00041174237, b: 0.00028966847, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -598,7 +598,7 @@ MonoBehaviour:
   m_MinValue: 100
   m_MaxValue: 10000
   m_WholeNumbers: 1
-  m_Value: 500
+  m_Value: 1968
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1022,9 +1022,8 @@ GameObject:
   m_Component:
   - component: {fileID: 503026613}
   - component: {fileID: 503026616}
-  - component: {fileID: 503026615}
-  - component: {fileID: 503026614}
   - component: {fileID: 503026617}
+  - component: {fileID: 503026618}
   m_Layer: 0
   m_Name: Spaceship
   m_TagString: Player
@@ -1049,71 +1048,6 @@ Transform:
   - {fileID: 2063080605}
   m_Father: {fileID: 1963437074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &503026614
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503026612}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &503026615
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503026612}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 278627b7597f0294a9f0dd88d681acdd, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &503026616
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1137,6 +1071,128 @@ MonoBehaviour:
   traverseSpeed: 1000
   rotateCameraSpeed: 10
   traverseSpeedSlider: {fileID: 158880674}
+--- !u!96 &503026618
+TrailRenderer:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503026612}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 2
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Time: 0.158
+  m_PreviewTimeScale: 1
+  m_Parameters:
+    serializedVersion: 3
+    widthMultiplier: 1
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.43998742
+        inSlope: -0.12635282
+        outSlope: -0.12635282
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.360056
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.07985484
+        value: 0.3707787
+        inSlope: -1.4418505
+        outSlope: -1.4418505
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.017332923
+        outWeight: 0.086214334
+      - serializedVersion: 3
+        time: 0.93469393
+        value: 0
+        inSlope: -0.05798816
+        outSlope: -0.05798816
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.860333
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 0, g: 1, b: 0.1782589, a: 1}
+      key1: {r: 0, g: 1, b: 0.20181227, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_ColorSpace: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 0
+    textureScale: {x: 1, y: 1}
+    shadowBias: 0.5
+    generateLightingData: 1
+  m_MinVertexDistance: 8.1
+  m_MaskInteraction: 0
+  m_Autodestruct: 0
+  m_Emitting: 1
+  m_ApplyActiveColorSpace: 1
 --- !u!1 &612191815
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,7 +1415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.23921569, g: 0.23921569, b: 0.23921569, a: 0.392}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1412,9 +1468,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.2
-  m_Range: 50000
+  m_Color: {r: 1, g: 0.879333, b: 0.740566, a: 1}
+  m_Intensity: 2
+  m_Range: 1e+20
   m_SpotAngle: 18.2
   m_InnerSpotAngle: 18.2
   m_CookieSize: 10
@@ -1452,10 +1508,10 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 4.04
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -1472,7 +1528,7 @@ Transform:
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1489,7 +1545,7 @@ Halo:
   m_Color:
     serializedVersion: 2
     rgba: 4278190335
-  m_Size: 220
+  m_Size: 2752
 --- !u!1 &778896432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1904,8 +1960,8 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1927,7 +1983,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 100000
+  far clip plane: 10000000
   field of view: 90
   orthographic: 0
   orthographic size: 5
@@ -2426,7 +2482,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1000
+  m_Radius: 500
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1079899333
 MeshRenderer:
@@ -2436,7 +2492,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079899329}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -2448,7 +2504,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0248e4e820dfc3f468ab5897ee6b20d0, type: 2}
+  - {fileID: 2100000, guid: 278627b7597f0294a9f0dd88d681acdd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4022,6 +4078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9636fb5439133584ba59c3c0b6597da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleFactor: 31.8
   directionalLight: {fileID: 705507993}
   saturnRings: {fileID: 919132149101957848}
   factSheetWrapper: {fileID: 1187584682}
@@ -4029,14 +4086,20 @@ MonoBehaviour:
   factSheetTitle: {fileID: 372642190}
   factSheetShowButton: {fileID: 68364852}
   factSheetHideButton: {fileID: 1571552538}
+  closerToSunButton: {fileID: 1277843860}
+  fartherFromSunButton: {fileID: 1043874971}
+  travellingErrorText: {fileID: 1060648536}
+  homeButton: {fileID: 1547835600}
+  player: {fileID: 503026612}
   Sun:
     material: {fileID: 2100000, guid: fe4ed057b0ec3874497bc346bdefac0c, type: 2}
     name: Slnko
     diameterInKilometers: 1400000
     distanceFromSunInKilometers: -100
-    orbitalVelocityInKilometersPerSecond: 7
+    orbitalVelocityInKilometersPerSecond: 3
     obliquityToOrbitInDegrees: 7.25
     fact: "Slnko tvor\xED 99,8 % hmotnosti celej Slne\u010Dnej s\xFAstavy."
+    moons: []
   Mercury:
     material: {fileID: 2100000, guid: 0c3fba572d4bba1419ae4a0efe91d70c, type: 2}
     name: "Merk\xFAr"
@@ -4045,6 +4108,7 @@ MonoBehaviour:
     orbitalVelocityInKilometersPerSecond: 47.4
     obliquityToOrbitInDegrees: 0.034
     fact: "Merk\xFAru trv\xE1 obeh okolo Slnka pribli\u017Ene tri pozemsk\xE9 mesiace."
+    moons: []
   Venus:
     material: {fileID: 2100000, guid: 4c8d11a6819b59549a958cd13c8d6f86, type: 2}
     name: "Venu\u0161a"
@@ -4055,6 +4119,7 @@ MonoBehaviour:
     fact: "Venu\u0161a a Zem maj\xFA ve\u013Emi podobn\xFA ve\u013Ekos\u0165, no
       je ove\u013Ea menej ob\xFDvate\u013En\xE1 \u2013 jej povrchov\xE1 teplota je
       465 \xB0C, dostato\u010Dne hor\xFAca na to, aby roztavila olovo."
+    moons: []
   Earth:
     material: {fileID: 2100000, guid: e316d20181eda7b4e849d525028d4102, type: 2}
     name: Zem
@@ -4063,6 +4128,14 @@ MonoBehaviour:
     orbitalVelocityInKilometersPerSecond: 29.8
     obliquityToOrbitInDegrees: 23.4
     fact: "Zem nie je ploch\xE1."
+    moons:
+    - material: {fileID: 2100000, guid: 6df6e5b7b316e4047ad97d474ed555fa, type: 2}
+      name: Mesiac
+      diameterInKilometers: 3480
+      orbitalVelocityInKilometersPerSecond: 1
+      obliquityToOrbitInDegrees: 6.68
+      meanOrbitalVelocityInKilometersPerSecond: 1.022
+      distanceFromPlanetToRotateAroundInKilomters: 384400
   Mars:
     material: {fileID: 2100000, guid: a151a0867ee74db4e8ced5db825b7067, type: 2}
     name: Mars
@@ -4071,6 +4144,7 @@ MonoBehaviour:
     orbitalVelocityInKilometersPerSecond: 24.1
     obliquityToOrbitInDegrees: 25.2
     fact: "Cel\xFD Mars je chladn\xFD ako ju\u017En\xFD p\xF3l."
+    moons: []
   Jupiter:
     material: {fileID: 2100000, guid: 6e09d3920f81e474b981271f3ac12c5f, type: 2}
     name: Jupiter
@@ -4080,6 +4154,35 @@ MonoBehaviour:
     obliquityToOrbitInDegrees: 3.1
     fact: "Najv\xE4\u010D\u0161\xED mesiac Jupitera m\xE1 slan\xFD oce\xE1n, ktor\xFD
       obsahuje viac vody ako na Zemi."
+    moons:
+    - material: {fileID: 2100000, guid: 82da1af09e33d8b40b82a6b5cc48a41f, type: 2}
+      name: Callisto
+      diameterInKilometers: 4806
+      orbitalVelocityInKilometersPerSecond: 8.21
+      obliquityToOrbitInDegrees: 0
+      meanOrbitalVelocityInKilometersPerSecond: 8.21
+      distanceFromPlanetToRotateAroundInKilomters: 1883000
+    - material: {fileID: 2100000, guid: 9bf8cb96ea7d37b4cb2be5d2503bd2fb, type: 2}
+      name: Europa
+      diameterInKilometers: 3121.6
+      orbitalVelocityInKilometersPerSecond: 8.21
+      obliquityToOrbitInDegrees: 0
+      meanOrbitalVelocityInKilometersPerSecond: 8.21
+      distanceFromPlanetToRotateAroundInKilomters: 671000
+    - material: {fileID: 2100000, guid: 9656af4a138e7f04d93bb75987ec574c, type: 2}
+      name: Ganymede
+      diameterInKilometers: 5268
+      orbitalVelocityInKilometersPerSecond: 10.9
+      obliquityToOrbitInDegrees: 0.183
+      meanOrbitalVelocityInKilometersPerSecond: 10.9
+      distanceFromPlanetToRotateAroundInKilomters: 1070000
+    - material: {fileID: 2100000, guid: 2170ac9a889abee4f85310ffe9c77cfc, type: 2}
+      name: IO
+      diameterInKilometers: 3640
+      orbitalVelocityInKilometersPerSecond: 17.334
+      obliquityToOrbitInDegrees: 0.05
+      meanOrbitalVelocityInKilometersPerSecond: 17.334
+      distanceFromPlanetToRotateAroundInKilomters: 422000
   Saturn:
     material: {fileID: 2100000, guid: c9447de5764b66745b2faf4a353243bd, type: 2}
     name: Saturn
@@ -4088,6 +4191,49 @@ MonoBehaviour:
     orbitalVelocityInKilometersPerSecond: 9.7
     obliquityToOrbitInDegrees: 26.7
     fact: "Prstence saturnu s\xFA tvoren\xE9 90% z vody."
+    moons:
+    - material: {fileID: 2100000, guid: d0ff519a4b2c433428855853b17c5322, type: 2}
+      name: Dione
+      diameterInKilometers: 0
+      orbitalVelocityInKilometersPerSecond: 0
+      obliquityToOrbitInDegrees: 0
+      meanOrbitalVelocityInKilometersPerSecond: 0
+      distanceFromPlanetToRotateAroundInKilomters: 0
+    - material: {fileID: 2100000, guid: a3b67a2a8967b4843a17e0a17da68ad1, type: 2}
+      name: Iapetus
+      diameterInKilometers: 0
+      orbitalVelocityInKilometersPerSecond: 0
+      obliquityToOrbitInDegrees: 0
+      meanOrbitalVelocityInKilometersPerSecond: 0
+      distanceFromPlanetToRotateAroundInKilomters: 0
+    - material: {fileID: 2100000, guid: e2474652390accb409e7ef0ff1bf0efa, type: 2}
+      name: Mimas
+      diameterInKilometers: 0
+      orbitalVelocityInKilometersPerSecond: 0
+      obliquityToOrbitInDegrees: 0
+      meanOrbitalVelocityInKilometersPerSecond: 0
+      distanceFromPlanetToRotateAroundInKilomters: 0
+    - material: {fileID: 2100000, guid: 80433b845165fe447943cea10a73f1fa, type: 2}
+      name: Rhea
+      diameterInKilometers: 0
+      orbitalVelocityInKilometersPerSecond: 0
+      obliquityToOrbitInDegrees: 0
+      meanOrbitalVelocityInKilometersPerSecond: 0
+      distanceFromPlanetToRotateAroundInKilomters: 0
+    - material: {fileID: 2100000, guid: 4ad79cc3b9823a542890c54681132b31, type: 2}
+      name: Tethys
+      diameterInKilometers: 0
+      orbitalVelocityInKilometersPerSecond: 0
+      obliquityToOrbitInDegrees: 0
+      meanOrbitalVelocityInKilometersPerSecond: 0
+      distanceFromPlanetToRotateAroundInKilomters: 0
+    - material: {fileID: 2100000, guid: ddad442c68410cb48aa0db07e4a3ee30, type: 2}
+      name: Titan
+      diameterInKilometers: 0
+      orbitalVelocityInKilometersPerSecond: 0
+      obliquityToOrbitInDegrees: 0
+      meanOrbitalVelocityInKilometersPerSecond: 0
+      distanceFromPlanetToRotateAroundInKilomters: 0
   Uranus:
     material: {fileID: 2100000, guid: 4748d5a6da6862f4180ee38f342e575b, type: 2}
     name: "Ur\xE1n"
@@ -4097,6 +4243,7 @@ MonoBehaviour:
     obliquityToOrbitInDegrees: 97.8
     fact: "Ur\xE1nov\xE9 oblaky s\xFA tvoren\xE9 s\xEDrovod\xEDkom, \u010Do znamen\xE1,
       \u017Ee maj\xFA ve\u013Emi podobn\xFD z\xE1pach ako zhnit\xE9 vajcia."
+    moons: []
   Neptune:
     material: {fileID: 2100000, guid: 1dded6156f39ac84697442b2d508d90b, type: 2}
     name: "Nept\xFAn"
@@ -4105,11 +4252,26 @@ MonoBehaviour:
     orbitalVelocityInKilometersPerSecond: 5.4
     obliquityToOrbitInDegrees: 28.3
     fact: "Nept\xFAn je hlavne ve\u013Ek\xE1 gu\u013Ea vod\xEDka a h\xE9lia."
-  closerToSunButton: {fileID: 1277843860}
-  fartherFromSunButton: {fileID: 1043874971}
-  travellingErrorText: {fileID: 1060648536}
-  homeButton: {fileID: 1547835600}
-  player: {fileID: 503026612}
+    moons: []
+  Pluto:
+    material: {fileID: 2100000, guid: 39a37c24dbe6ea943abcac4d775d21b0, type: 2}
+    name: Pluto
+    diameterInKilometers: 2376
+    distanceFromSunInKilometers: 5906.4
+    orbitalVelocityInKilometersPerSecond: 4.7
+    obliquityToOrbitInDegrees: 122.5
+    fact: "Pluto bolo objaven\xE9 v roku 1930. Pluto je aktu\xE1lne klasifikovan\xE9
+      ako trpasli\u010Dia plan\xE9ta, kv\xF4li jeho ve\u013Ekosti, ale dlho bola
+      klasifikovan\xE1 ako na\u0161a deviata plan\xE9ta n\xE1\u0161ho slne\u010Dn\xE9ho
+      syst\xE9mu."
+    moons:
+    - material: {fileID: 2100000, guid: 0c3fba572d4bba1419ae4a0efe91d70c, type: 2}
+      name: Charon
+      diameterInKilometers: 1212
+      orbitalVelocityInKilometersPerSecond: 0.23
+      obliquityToOrbitInDegrees: 6
+      meanOrbitalVelocityInKilometersPerSecond: 0.23
+      distanceFromPlanetToRotateAroundInKilomters: 19640
 --- !u!4 &2063080605 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 609710574599968172, guid: fab926ee0f050a142b4d20787f47fa46, type: 3}
