@@ -215,7 +215,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 18.523071, y: -185.13806, z: -52.94313, w: 91.24895}
+  m_margin: {x: 18.523071, y: -189.1518, z: -52.94313, w: -19.130264}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1470,7 +1470,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.879333, b: 0.740566, a: 1}
   m_Intensity: 2
-  m_Range: 1e+20
+  m_Range: 1e+30
   m_SpotAngle: 18.2
   m_InnerSpotAngle: 18.2
   m_CookieSize: 10
@@ -1750,8 +1750,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 30, y: 105}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 30, y: 46}
+  m_SizeDelta: {x: 0, y: 49.459988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &848159338
 MonoBehaviour:
@@ -1983,7 +1983,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 10000000
+  far clip plane: 1e+20
   field of view: 90
   orthographic: 0
   orthographic size: 5
@@ -3339,7 +3339,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30, y: 7.5989866}
+  m_AnchoredPosition: {x: 30, y: -113}
   m_SizeDelta: {x: 208.4, y: 29.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1571552538
@@ -4127,7 +4127,8 @@ MonoBehaviour:
     distanceFromSunInKilometers: 149.6
     orbitalVelocityInKilometersPerSecond: 29.8
     obliquityToOrbitInDegrees: 23.4
-    fact: "Zem nie je ploch\xE1."
+    fact: "Zem je piata plan\xE9ta v porad\xED v slne\u010Dnej s\xFAstave. Zem nie
+      je ploch\xE1, ale ani nie perfektne gu\u013Eat\xE1."
     moons:
     - material: {fileID: 2100000, guid: 6df6e5b7b316e4047ad97d474ed555fa, type: 2}
       name: Mesiac
@@ -4136,6 +4137,11 @@ MonoBehaviour:
       obliquityToOrbitInDegrees: 6.68
       meanOrbitalVelocityInKilometersPerSecond: 1.022
       distanceFromPlanetToRotateAroundInKilomters: 384400
+      fact: "Mesiac pravdepodobne vznikol po zr\xE1\u017Eke telesa o ve\u013Ekosti
+        Marsu so Zemou pred nieko\u013Ek\xFDmi miliardami rokov. Jedin\xFD prirodzen\xFD
+        satelit Zeme sa jednoducho naz\xFDva \u201EMesiac\u201C, preto\u017Ee \u013Eudia
+        nevedeli, \u017Ee existuj\xFA aj in\xE9 mesiace, k\xFDm Galileo Galilei v
+        roku 1610 neobjavil \u0161tyri mesiace obiehaj\xFAce okolo Jupitera."
   Mars:
     material: {fileID: 2100000, guid: a151a0867ee74db4e8ced5db825b7067, type: 2}
     name: Mars
@@ -4162,6 +4168,9 @@ MonoBehaviour:
       obliquityToOrbitInDegrees: 0
       meanOrbitalVelocityInKilometersPerSecond: 8.21
       distanceFromPlanetToRotateAroundInKilomters: 1883000
+      fact: "Callisto je druh\xFD najv\xE4\u010D\u0161\xED mesiac Jupitera a tret\xED
+        najv\xE4\u010D\u0161\xED mesiac v na\u0161ej slne\u010Dnej s\xFAstave. M\xE1
+        pribli\u017Ene rovnak\xFA ve\u013Ekos\u0165 ako Merk\xFAr. "
     - material: {fileID: 2100000, guid: 9bf8cb96ea7d37b4cb2be5d2503bd2fb, type: 2}
       name: Europa
       diameterInKilometers: 3121.6
@@ -4169,6 +4178,8 @@ MonoBehaviour:
       obliquityToOrbitInDegrees: 0
       meanOrbitalVelocityInKilometersPerSecond: 8.21
       distanceFromPlanetToRotateAroundInKilomters: 671000
+      fact: "Eur\xF3pa je jedn\xFDm z najv\xE4\u010D\u0161\xEDch z viac ako 90 mesiacov
+        Jupitera. Je to \u0161iesty mesiac najbli\u017E\u0161ie k plan\xE9te. "
     - material: {fileID: 2100000, guid: 9656af4a138e7f04d93bb75987ec574c, type: 2}
       name: Ganymede
       diameterInKilometers: 5268
@@ -4176,6 +4187,11 @@ MonoBehaviour:
       obliquityToOrbitInDegrees: 0.183
       meanOrbitalVelocityInKilometersPerSecond: 10.9
       distanceFromPlanetToRotateAroundInKilomters: 1070000
+      fact: "Jupiterov mesiac Ganymede je najv\xE4\u010D\u0161\xED mesiac v na\u0161ej
+        slne\u010Dnej s\xFAstave, v\xE4\u010D\u0161\xED ako plan\xE9ta Merk\xFAr
+        a trpasli\u010Dia plan\xE9ta Pluto. Hubbleov vesm\xEDrny teleskop agent\xFAry
+        NASA na\u0161iel doteraz najlep\u0161\xED d\xF4kaz podzemn\xE9ho oce\xE1nu
+        so slanou vodou na Ganymede. "
     - material: {fileID: 2100000, guid: 2170ac9a889abee4f85310ffe9c77cfc, type: 2}
       name: IO
       diameterInKilometers: 3640
@@ -4183,6 +4199,10 @@ MonoBehaviour:
       obliquityToOrbitInDegrees: 0.05
       meanOrbitalVelocityInKilometersPerSecond: 17.334
       distanceFromPlanetToRotateAroundInKilomters: 422000
+      fact: "Jupiterov skalnat\xFD mesiac Io je vulkanicky najakt\xEDvnej\u0161\xED
+        svet v slne\u010Dnej s\xFAstave so stovkami sopiek, z ktor\xFDch niektor\xE9
+        vyr\xE1\u017Eaj\xFA l\xE1vov\xE9 font\xE1ny vysok\xE9 desiatky m\xED\u013E
+        (alebo kilometrov)."
   Saturn:
     material: {fileID: 2100000, guid: c9447de5764b66745b2faf4a353243bd, type: 2}
     name: Saturn
@@ -4194,46 +4214,67 @@ MonoBehaviour:
     moons:
     - material: {fileID: 2100000, guid: d0ff519a4b2c433428855853b17c5322, type: 2}
       name: Dione
-      diameterInKilometers: 0
-      orbitalVelocityInKilometersPerSecond: 0
-      obliquityToOrbitInDegrees: 0
-      meanOrbitalVelocityInKilometersPerSecond: 0
-      distanceFromPlanetToRotateAroundInKilomters: 0
+      diameterInKilometers: 1200
+      orbitalVelocityInKilometersPerSecond: 10.03
+      obliquityToOrbitInDegrees: 0.02
+      meanOrbitalVelocityInKilometersPerSecond: 10.03
+      distanceFromPlanetToRotateAroundInKilomters: 377400
+      fact: "Hustota Dione je 1,48-kr\xE1t v\xE4\u010D\u0161ia ako hustota tekutej
+        vody, \u010Do nazna\u010Duje, \u017Ee asi tretinu Dione tvor\xED hust\xE9
+        jadro (pravdepodobne silik\xE1tov\xE1 hornina), pri\u010Dom zvy\u0161ok materi\xE1lu
+        tvor\xED \u013Ead."
     - material: {fileID: 2100000, guid: a3b67a2a8967b4843a17e0a17da68ad1, type: 2}
       name: Iapetus
-      diameterInKilometers: 0
-      orbitalVelocityInKilometersPerSecond: 0
-      obliquityToOrbitInDegrees: 0
-      meanOrbitalVelocityInKilometersPerSecond: 0
-      distanceFromPlanetToRotateAroundInKilomters: 0
+      diameterInKilometers: 1436
+      orbitalVelocityInKilometersPerSecond: 3.26
+      obliquityToOrbitInDegrees: 14.72
+      meanOrbitalVelocityInKilometersPerSecond: 3.26
+      distanceFromPlanetToRotateAroundInKilomters: 3561300
+      fact: 'Giovanni Cassini discovered Iapetus on Oct. 25, 1671. However, to astronomers
+        Iapetus appeared only as a dot whose brightness varied from brighter to fainter
+        over the course of an orbit around Saturn. '
     - material: {fileID: 2100000, guid: e2474652390accb409e7ef0ff1bf0efa, type: 2}
       name: Mimas
-      diameterInKilometers: 0
-      orbitalVelocityInKilometersPerSecond: 0
-      obliquityToOrbitInDegrees: 0
-      meanOrbitalVelocityInKilometersPerSecond: 0
-      distanceFromPlanetToRotateAroundInKilomters: 0
+      diameterInKilometers: 397
+      orbitalVelocityInKilometersPerSecond: 14.3
+      obliquityToOrbitInDegrees: 1.53
+      meanOrbitalVelocityInKilometersPerSecond: 14.3
+      distanceFromPlanetToRotateAroundInKilomters: 185500
+      fact: "Mimas objavil 17. septembra 1789 anglick\xFD astron\xF3m William Herschel
+        pomocou svojho 40-stopov\xE9ho (12,19 metrov\xE9ho) reflektorov\xE9ho teleskopu.
+        Pozemn\xED astron\xF3movia mohli vidie\u0165 Mimas len ako bodku, k\xFDm
+        ho Voyagery I a II v roku 1980 nezhotovili. Sonda Cassini sa nieko\u013Ekokr\xE1t
+        pribl\xED\u017Eila a poskytla podrobn\xE9 sn\xEDmky Mimasu."
     - material: {fileID: 2100000, guid: 80433b845165fe447943cea10a73f1fa, type: 2}
       name: Rhea
-      diameterInKilometers: 0
-      orbitalVelocityInKilometersPerSecond: 0
-      obliquityToOrbitInDegrees: 0
-      meanOrbitalVelocityInKilometersPerSecond: 0
-      distanceFromPlanetToRotateAroundInKilomters: 0
+      diameterInKilometers: 1528
+      orbitalVelocityInKilometersPerSecond: 8.49
+      obliquityToOrbitInDegrees: 0.35
+      meanOrbitalVelocityInKilometersPerSecond: 8.49
+      distanceFromPlanetToRotateAroundInKilomters: 527000
+      fact: Giovanni Cassini discovered Rhea on Dec. 23, 1672. Rhea's density of
+        1.233 times that of liquid water suggests that Rhea is three quarters ice
+        and one quarter rock.
     - material: {fileID: 2100000, guid: 4ad79cc3b9823a542890c54681132b31, type: 2}
       name: Tethys
-      diameterInKilometers: 0
-      orbitalVelocityInKilometersPerSecond: 0
-      obliquityToOrbitInDegrees: 0
-      meanOrbitalVelocityInKilometersPerSecond: 0
-      distanceFromPlanetToRotateAroundInKilomters: 0
+      diameterInKilometers: 1059
+      orbitalVelocityInKilometersPerSecond: 11.35
+      obliquityToOrbitInDegrees: 1.09
+      meanOrbitalVelocityInKilometersPerSecond: 11.35
+      distanceFromPlanetToRotateAroundInKilomters: 294700
+      fact: "Giovanni Cassini objavil Tethys 21. marca 1684. Hustota Tethys je 0,97-n\xE1sobok
+        hustoty tekutej vody, \u010Do nazna\u010Duje, \u017Ee Tethys sa sklad\xE1
+        takmer v\xFDlu\u010Dne z vodn\xE9ho \u013Eadu a mal\xE9ho mno\u017Estva horniny."
     - material: {fileID: 2100000, guid: ddad442c68410cb48aa0db07e4a3ee30, type: 2}
       name: Titan
-      diameterInKilometers: 0
-      orbitalVelocityInKilometersPerSecond: 0
-      obliquityToOrbitInDegrees: 0
-      meanOrbitalVelocityInKilometersPerSecond: 0
-      distanceFromPlanetToRotateAroundInKilomters: 0
+      diameterInKilometers: 5150
+      orbitalVelocityInKilometersPerSecond: 5.57
+      obliquityToOrbitInDegrees: 0.33
+      meanOrbitalVelocityInKilometersPerSecond: 5.57
+      distanceFromPlanetToRotateAroundInKilomters: 1221900
+      fact: "Najv\xE4\u010D\u0161\xED mesiac Saturnu, Titan, je \u013Eadov\xFD svet,
+        ktor\xE9ho povrch je \xFAplne zakryt\xFD zlatou hmlistou atmosf\xE9rou. Titan
+        je druh\xFD najv\xE4\u010D\u0161\xED mesiac v na\u0161ej slne\u010Dnej s\xFAstave. "
   Uranus:
     material: {fileID: 2100000, guid: 4748d5a6da6862f4180ee38f342e575b, type: 2}
     name: "Ur\xE1n"
@@ -4252,7 +4293,16 @@ MonoBehaviour:
     orbitalVelocityInKilometersPerSecond: 5.4
     obliquityToOrbitInDegrees: 28.3
     fact: "Nept\xFAn je hlavne ve\u013Ek\xE1 gu\u013Ea vod\xEDka a h\xE9lia."
-    moons: []
+    moons:
+    - material: {fileID: 2100000, guid: 3d0b8b47a0841e5498993d0f485a8d52, type: 2}
+      name: Triton
+      diameterInKilometers: 2706.8
+      orbitalVelocityInKilometersPerSecond: -4.39
+      obliquityToOrbitInDegrees: 157.345
+      meanOrbitalVelocityInKilometersPerSecond: -4.39
+      distanceFromPlanetToRotateAroundInKilomters: 354800
+      fact: "Triton objavil 10. okt\xF3bra 1846 britsk\xFD astron\xF3m William Lassell,
+        len 17 dn\xED po objaven\xED samotn\xE9ho Nept\xFAna."
   Pluto:
     material: {fileID: 2100000, guid: 39a37c24dbe6ea943abcac4d775d21b0, type: 2}
     name: Pluto
@@ -4272,6 +4322,7 @@ MonoBehaviour:
       obliquityToOrbitInDegrees: 6
       meanOrbitalVelocityInKilometersPerSecond: 0.23
       distanceFromPlanetToRotateAroundInKilomters: 19640
+      fact: 
 --- !u!4 &2063080605 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 609710574599968172, guid: fab926ee0f050a142b4d20787f47fa46, type: 3}
