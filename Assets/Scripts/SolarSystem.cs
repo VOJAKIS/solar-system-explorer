@@ -114,13 +114,15 @@ public class SolarSystem : MonoBehaviour
 
 	void ShowUI()
 	{
-		// UI.SetActive(true);
 		UI.enabled = true;
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
 	}
 
 	void HideUI()
 	{
-		// UI.SetActive(false);
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
 		UI.enabled = false;
 	}
 

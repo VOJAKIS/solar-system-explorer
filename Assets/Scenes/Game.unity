@@ -243,7 +243,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 18.523071, y: -189.1518, z: -52.94313, w: -19.130264}
+  m_margin: {x: 39.873833, y: -189.1518, z: -34.503815, w: -26.894192}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -285,7 +285,7 @@ RectTransform:
   m_GameObject: {fileID: 68364850}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.64, y: 0.64, z: 0.64}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1700907606}
@@ -293,7 +293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -304.7}
+  m_AnchoredPosition: {x: 0, y: -213.9}
   m_SizeDelta: {x: 208.4, y: 29.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &68364852
@@ -412,7 +412,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 456.5, y: -290}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &142339873
@@ -444,8 +444,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 2466250751
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.57254905}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -538,7 +538,7 @@ RectTransform:
   m_GameObject: {fileID: 158880672}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.91, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1341293291}
@@ -548,7 +548,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 182.6, y: 175.3}
+  m_AnchoredPosition: {x: 179.2, y: 168.4}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &158880674
@@ -720,13 +720,13 @@ RectTransform:
   - {fileID: 173860820}
   - {fileID: 830261539}
   - {fileID: 1420022593}
-  - {fileID: 1958635826}
   - {fileID: 158880673}
+  - {fileID: 1958635826}
   m_Father: {fileID: 323836630}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -153.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &323836629
@@ -754,15 +754,15 @@ RectTransform:
   m_GameObject: {fileID: 323836629}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 221044809}
   m_Father: {fileID: 1167958950}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 334, y: 0}
+  m_AnchoredPosition: {x: 247.4, y: -113.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &358576634
@@ -923,7 +923,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 23.364258, y: -186.28802, z: -49.745605, w: 201.23706}
+  m_margin: {x: 35.01013, y: -186.28802, z: -36.15876, w: 201.23706}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1470,7 +1470,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.879333, b: 0.740566, a: 1}
   m_Intensity: 2
-  m_Range: 1e+30
+  m_Range: 1e+20
   m_SpotAngle: 18.2
   m_InnerSpotAngle: 18.2
   m_CookieSize: 10
@@ -1616,7 +1616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 183.6, y: 277.5}
+  m_AnchoredPosition: {x: 180.7, y: 273.1}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &830261540
@@ -1639,7 +1639,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "R\xFDchlos\u0165"
+  m_text: "R\xFDchlos\u0165\ncestovania"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1666,8 +1666,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1702,7 +1702,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.015625, y: -0.25585938, z: 0.37109375, w: -0.7203064}
+  m_margin: {x: -0.87438583, y: -0.25585938, z: 0.37109375, w: -0.7203064}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1743,14 +1743,14 @@ RectTransform:
   m_GameObject: {fileID: 848159336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.69, y: 2.45, z: 1}
+  m_LocalScale: {x: 2.4, y: 2.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1187584683}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 30, y: 46}
+  m_AnchoredPosition: {x: 24.2, y: 46}
   m_SizeDelta: {x: 0, y: 49.459988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &848159338
@@ -1825,7 +1825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -456, y: -290}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &929422174
@@ -1983,7 +1983,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1e+16
+  far clip plane: 1e+10
   field of view: 90
   orthographic: 0
   orthographic size: 5
@@ -2582,7 +2582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -2665,8 +2665,8 @@ RectTransform:
   m_GameObject: {fileID: 1187584682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 848159337}
   - {fileID: 372642189}
@@ -2676,7 +2676,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -470, y: -99}
+  m_AnchoredPosition: {x: -346.9, y: -42}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1277843858
@@ -3043,7 +3043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 182.3, y: 262.7}
+  m_AnchoredPosition: {x: 179.9, y: 247.5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1420022594
@@ -3289,7 +3289,7 @@ RectTransform:
   m_GameObject: {fileID: 1568159236}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.67, y: 0.67, z: 0.67}
+  m_LocalScale: {x: 0.51, y: 0.51, z: 0.51}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 678933184}
@@ -3300,7 +3300,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 104}
+  m_AnchoredPosition: {x: 0, y: 67}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1571552536
@@ -3339,7 +3339,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30, y: -113}
+  m_AnchoredPosition: {x: 33.9, y: -113}
   m_SizeDelta: {x: 208.4, y: 29.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1571552538
@@ -3457,7 +3457,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 298.2, y: -198}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1686271507
@@ -3895,7 +3895,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -297.1, y: -197.2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1958635825
@@ -3932,7 +3932,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 181.9, y: 88.200005}
+  m_AnchoredPosition: {x: 179, y: 88.200005}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1958635827
@@ -4129,7 +4129,9 @@ MonoBehaviour:
     orbitalVelocityInKilometersPerSecond: 29.8
     obliquityToOrbitInDegrees: 23.4
     fact: "Zem je piata plan\xE9ta v porad\xED v slne\u010Dnej s\xFAstave. Zem nie
-      je ploch\xE1, ale ani nie perfektne gu\u013Eat\xE1."
+      je ploch\xE1, ale ani nie perfektne gu\u013Eat\xE1. Medzi vzdialenos\u0165
+      Zeme a Mesiaca sa dok\xE1\u017Ee zmesti\u0165 ka\u017Ed\xFD plan\xE9ta slne\u010Dnej
+      s\xFAstavy."
     moons:
     - material: {fileID: 2100000, guid: 6df6e5b7b316e4047ad97d474ed555fa, type: 2}
       name: Mesiac
@@ -4277,7 +4279,7 @@ MonoBehaviour:
         ktor\xE9ho povrch je \xFAplne zakryt\xFD zlatou hmlistou atmosf\xE9rou. Titan
         je druh\xFD najv\xE4\u010D\u0161\xED mesiac v na\u0161ej slne\u010Dnej s\xFAstave. "
   Uranus:
-    material: {fileID: 2100000, guid: 4748d5a6da6862f4180ee38f342e575b, type: 2}
+    material: {fileID: 2100000, guid: 9e84a806cd0a59d488049359093fbec4, type: 2}
     name: "Ur\xE1n"
     diameterInKilometers: 51118
     distanceFromSunInKilometers: 2867
@@ -4287,7 +4289,7 @@ MonoBehaviour:
       \u017Ee maj\xFA ve\u013Emi podobn\xFD z\xE1pach ako zhnit\xE9 vajcia."
     moons: []
   Neptune:
-    material: {fileID: 2100000, guid: 1dded6156f39ac84697442b2d508d90b, type: 2}
+    material: {fileID: 2100000, guid: 0aac6fd113bd2d144a119c76ff57890a, type: 2}
     name: "Nept\xFAn"
     diameterInKilometers: 49528
     distanceFromSunInKilometers: 4515
@@ -4323,7 +4325,9 @@ MonoBehaviour:
       obliquityToOrbitInDegrees: 6
       meanOrbitalVelocityInKilometersPerSecond: 0.23
       distanceFromPlanetToRotateAroundInKilomters: 19640
-      fact: 
+      fact: "Ch\xE1ron je najv\xE4\u010D\u0161\xED z piatich mesiacov Pluta. Rovnak\xE9
+        povrchy Ch\xE1rona a Pluta s\xFA v\u017Edy oproti sebe, jav naz\xFDvan\xFD
+        viazan\xE1 rot\xE1cia."
 --- !u!4 &2063080605 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 609710574599968172, guid: fab926ee0f050a142b4d20787f47fa46, type: 3}
