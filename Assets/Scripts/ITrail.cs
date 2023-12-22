@@ -1,0 +1,4 @@
+interface ITrail
+{
+  void addTrailToObject();
+}
