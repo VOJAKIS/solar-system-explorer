@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.754717, g: 0.754717, b: 0.754717, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: dba087d9a63125f429ec73ca66bd8808, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 6212f5f5183dd7b45b2ce1b2f6b70f08, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.0002095896, g: 0.0007170102, b: 0.00052093057, a: 1}
+  m_IndirectSpecularColor: {r: 0.00017749399, g: 0.00053532387, b: 0.0004424932, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4128,7 +4128,7 @@ MonoBehaviour:
     distanceFromSunInKilometers: 149.6
     orbitalVelocityInKilometersPerSecond: 29.8
     obliquityToOrbitInDegrees: 23.4
-    fact: "Zem je piata plan\xE9ta v porad\xED v slne\u010Dnej s\xFAstave. Zem nie
+    fact: "Zem je tretia plan\xE9ta v porad\xED v slne\u010Dnej s\xFAstave. Zem nie
       je ploch\xE1, ale ani nie perfektne gu\u013Eat\xE1. Medzi vzdialenos\u0165
       Zeme a Mesiaca sa dok\xE1\u017Ee zmesti\u0165 ka\u017Ed\xFD plan\xE9ta slne\u010Dnej
       s\xFAstavy."
@@ -4152,7 +4152,7 @@ MonoBehaviour:
     distanceFromSunInKilometers: 228
     orbitalVelocityInKilometersPerSecond: 24.1
     obliquityToOrbitInDegrees: 25.2
-    fact: "Cel\xFD Mars je chladn\xFD ako ju\u017En\xFD p\xF3l."
+    fact: "Cel\xFD Mars je chladn\xFD ako ju\u017En\xFD p\xF3l Zeme."
     moons: []
   Jupiter:
     material: {fileID: 2100000, guid: 6e09d3920f81e474b981271f3ac12c5f, type: 2}
