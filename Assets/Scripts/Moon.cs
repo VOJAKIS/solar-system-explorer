@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,12 +23,30 @@ public class Moon
 	private GameObject sphere;
 	private GameObject wrapper;
 	private GameObject parentWrapper;
-
+	private GameObject trailRenderer;
 
 	public void initialize()
 	{
 		CreateWrapper();
 		CreateSphere();
+		AddTrailComponent();
+
+	}
+
+	void AddTrailComponent()
+	{
+		TrailRenderer thisTrailRenderer = wrapper.AddComponent<TrailRenderer>() as TrailRenderer;
+		TrailRenderer otherTrailRenderer = trailRenderer.GetComponent<TrailRenderer>() as TrailRenderer;
+
+		thisTrailRenderer.widthCurve = otherTrailRenderer.widthCurve;
+		thisTrailRenderer.time = otherTrailRenderer.time / 5;
+		thisTrailRenderer.endColor = otherTrailRenderer.endColor;
+		thisTrailRenderer.startColor = otherTrailRenderer.startColor;
+		thisTrailRenderer.SetMaterials(otherTrailRenderer.materials.ToList());
+		thisTrailRenderer.minVertexDistance = otherTrailRenderer.minVertexDistance;
+		thisTrailRenderer.emitting = otherTrailRenderer.emitting;
+		thisTrailRenderer.generateLightingData = otherTrailRenderer.generateLightingData;
+		thisTrailRenderer.motionVectorGenerationMode = otherTrailRenderer.motionVectorGenerationMode;
 	}
 
 	public void Rotate()
@@ -82,5 +101,10 @@ public class Moon
 	public string getFact()
 	{
 		return fact;
+	}
+	
+	public void setTrailRenderer(GameObject trailRenderer)
+	{
+		this.trailRenderer = trailRenderer;
 	}
 }

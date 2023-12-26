@@ -2,15 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Planet : MonoBehaviour, ITrail
+public class Planet : MonoBehaviour
 {
 	private GameObject player;
 	public Behaviour halo;
-
-	void ITrail.addTrailToObject()
-	{
-		// TODO: Define method
-	}
 
 	void Start()
 	{

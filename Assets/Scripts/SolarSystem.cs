@@ -30,6 +30,8 @@ public class SolarSystem : MonoBehaviour
 
 	public Canvas UI;
 
+	public GameObject trailRenderer;
+
 	[SerializeField]
 	public SolarSystemObject Sun;
 
@@ -51,6 +53,7 @@ public class SolarSystem : MonoBehaviour
 		foreach (SolarSystemObject solarSystemObject in solarSystemObjects)
 		{
 			Vector3 pos = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
+			solarSystemObject.setTrailRenderer(trailRenderer);
 			solarSystemObject.setScaleFactor(scaleFactor);
 			solarSystemObject.GenerateSphere(pos);
 		}

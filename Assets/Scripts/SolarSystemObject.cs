@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,8 @@ public class SolarSystemObject
 	public string fact;
 
 	public List<Moon> moons;
+
+	[SerializeField] private GameObject trailRenderer;
 
 	private float scaleFactor = 25f;
 	private GameObject sphere;
@@ -47,12 +50,32 @@ public class SolarSystemObject
 
 		// Generate moons
 		InitializeMoons();
+
+		// Add Trail
+		AddTrailComponent();
+	}
+
+	void AddTrailComponent()
+	{
+		TrailRenderer thisTrailRenderer = wrapper.AddComponent<TrailRenderer>() as TrailRenderer;
+		TrailRenderer otherTrailRenderer = trailRenderer.GetComponent<TrailRenderer>() as TrailRenderer;
+
+		thisTrailRenderer.widthCurve = otherTrailRenderer.widthCurve;
+		thisTrailRenderer.time = otherTrailRenderer.time;
+		thisTrailRenderer.endColor = otherTrailRenderer.endColor;
+		thisTrailRenderer.startColor = otherTrailRenderer.startColor;
+		thisTrailRenderer.SetMaterials(otherTrailRenderer.materials.ToList());
+		thisTrailRenderer.minVertexDistance = otherTrailRenderer.minVertexDistance;
+		thisTrailRenderer.emitting = otherTrailRenderer.emitting;
+		thisTrailRenderer.generateLightingData = otherTrailRenderer.generateLightingData;
+		thisTrailRenderer.motionVectorGenerationMode = otherTrailRenderer.motionVectorGenerationMode;
 	}
 
 	private void InitializeMoons()
 	{
 		foreach (Moon moon in moons)
 		{
+			moon.setTrailRenderer(trailRenderer);
 			moon.setParentWrapper(wrapper);
 			moon.setScaleFactor(scaleFactor);
 			moon.initialize();
@@ -105,5 +128,10 @@ public class SolarSystemObject
 	public void setScaleFactor(float scaleFactor)
 	{
 		this.scaleFactor = scaleFactor;
+	}
+
+	public void setTrailRenderer(GameObject trailRenderer)
+	{
+		this.trailRenderer = trailRenderer;
 	}
 }

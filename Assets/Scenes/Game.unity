@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.00017749399, g: 0.00053532387, b: 0.0004424932, a: 1}
+  m_IndirectSpecularColor: {r: 0.00015556064, g: 0.0005345215, b: 0.00037937792, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -937,6 +937,160 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 372642188}
   m_CullTransparentMesh: 1
+--- !u!1 &414917706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 414917708}
+  - component: {fileID: 414917707}
+  m_Layer: 0
+  m_Name: TrailObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!96 &414917707
+TrailRenderer:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414917706}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 2
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Time: 14.79
+  m_PreviewTimeScale: 1
+  m_Parameters:
+    serializedVersion: 3
+    widthMultiplier: 1
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.06605751
+        value: 0
+        inSlope: -0.12635282
+        outSlope: -0.12635282
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.360056
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.1732558
+        value: 1
+        inSlope: -3.192397
+        outSlope: -3.192397
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.017332923
+        outWeight: 0.12026584
+      - serializedVersion: 3
+        time: 0.7592905
+        value: 0
+        inSlope: -0.7413751
+        outSlope: -0.7413751
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.18901367
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      key1: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_ColorSpace: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 0
+    textureScale: {x: 1, y: 1}
+    shadowBias: 0.5
+    generateLightingData: 1
+  m_MinVertexDistance: 2.41
+  m_MaskInteraction: 0
+  m_Autodestruct: 0
+  m_Emitting: 1
+  m_ApplyActiveColorSpace: 1
+--- !u!4 &414917708
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414917706}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &416305149
 GameObject:
   m_ObjectHideFlags: 0
@@ -4042,6 +4196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1963437074}
   - component: {fileID: 1963437075}
+  - component: {fileID: 1963437076}
   m_Layer: 0
   m_Name: Solar System
   m_TagString: Untagged
@@ -4092,6 +4247,7 @@ MonoBehaviour:
   homeButton: {fileID: 1547835600}
   player: {fileID: 503026612}
   UI: {fileID: 1167958949}
+  trailRenderer: {fileID: 414917706}
   Sun:
     material: {fileID: 2100000, guid: fe4ed057b0ec3874497bc346bdefac0c, type: 2}
     name: Slnko
@@ -4101,6 +4257,7 @@ MonoBehaviour:
     obliquityToOrbitInDegrees: 7.25
     fact: "Slnko tvor\xED 99,8 % hmotnosti celej Slne\u010Dnej s\xFAstavy."
     moons: []
+    trailRenderer: {fileID: 0}
   Mercury:
     material: {fileID: 2100000, guid: 0c3fba572d4bba1419ae4a0efe91d70c, type: 2}
     name: "Merk\xFAr"
@@ -4110,6 +4267,7 @@ MonoBehaviour:
     obliquityToOrbitInDegrees: 0.034
     fact: "Merk\xFAru trv\xE1 obeh okolo Slnka pribli\u017Ene tri pozemsk\xE9 mesiace."
     moons: []
+    trailRenderer: {fileID: 0}
   Venus:
     material: {fileID: 2100000, guid: 4c8d11a6819b59549a958cd13c8d6f86, type: 2}
     name: "Venu\u0161a"
@@ -4121,6 +4279,7 @@ MonoBehaviour:
       je ove\u013Ea menej ob\xFDvate\u013En\xE1 \u2013 jej povrchov\xE1 teplota je
       465 \xB0C, dostato\u010Dne hor\xFAca na to, aby roztavila olovo."
     moons: []
+    trailRenderer: {fileID: 0}
   Earth:
     material: {fileID: 2100000, guid: e316d20181eda7b4e849d525028d4102, type: 2}
     name: Zem
@@ -4145,6 +4304,7 @@ MonoBehaviour:
         satelit Zeme sa jednoducho naz\xFDva \u201EMesiac\u201C, preto\u017Ee \u013Eudia
         nevedeli, \u017Ee existuj\xFA aj in\xE9 mesiace, k\xFDm Galileo Galilei v
         roku 1610 neobjavil \u0161tyri mesiace obiehaj\xFAce okolo Jupitera."
+    trailRenderer: {fileID: 0}
   Mars:
     material: {fileID: 2100000, guid: a151a0867ee74db4e8ced5db825b7067, type: 2}
     name: Mars
@@ -4154,6 +4314,7 @@ MonoBehaviour:
     obliquityToOrbitInDegrees: 25.2
     fact: "Cel\xFD Mars je chladn\xFD ako ju\u017En\xFD p\xF3l Zeme."
     moons: []
+    trailRenderer: {fileID: 0}
   Jupiter:
     material: {fileID: 2100000, guid: 6e09d3920f81e474b981271f3ac12c5f, type: 2}
     name: Jupiter
@@ -4196,7 +4357,7 @@ MonoBehaviour:
         NASA na\u0161iel doteraz najlep\u0161\xED d\xF4kaz podzemn\xE9ho oce\xE1nu
         so slanou vodou na Ganymede. "
     - material: {fileID: 2100000, guid: 2170ac9a889abee4f85310ffe9c77cfc, type: 2}
-      name: IO
+      name: Io
       diameterInKilometers: 3640
       orbitalVelocityInKilometersPerSecond: 17.334
       obliquityToOrbitInDegrees: 0.05
@@ -4206,6 +4367,7 @@ MonoBehaviour:
         svet v slne\u010Dnej s\xFAstave so stovkami sopiek, z ktor\xFDch niektor\xE9
         vyr\xE1\u017Eaj\xFA l\xE1vov\xE9 font\xE1ny vysok\xE9 desiatky m\xED\u013E
         (alebo kilometrov)."
+    trailRenderer: {fileID: 0}
   Saturn:
     material: {fileID: 2100000, guid: c9447de5764b66745b2faf4a353243bd, type: 2}
     name: Saturn
@@ -4278,6 +4440,7 @@ MonoBehaviour:
       fact: "Najv\xE4\u010D\u0161\xED mesiac Saturnu, Titan, je \u013Eadov\xFD svet,
         ktor\xE9ho povrch je \xFAplne zakryt\xFD zlatou hmlistou atmosf\xE9rou. Titan
         je druh\xFD najv\xE4\u010D\u0161\xED mesiac v na\u0161ej slne\u010Dnej s\xFAstave. "
+    trailRenderer: {fileID: 0}
   Uranus:
     material: {fileID: 2100000, guid: 9e84a806cd0a59d488049359093fbec4, type: 2}
     name: "Ur\xE1n"
@@ -4288,6 +4451,7 @@ MonoBehaviour:
     fact: "Ur\xE1nov\xE9 oblaky s\xFA tvoren\xE9 s\xEDrovod\xEDkom, \u010Do znamen\xE1,
       \u017Ee maj\xFA ve\u013Emi podobn\xFD z\xE1pach ako zhnit\xE9 vajcia."
     moons: []
+    trailRenderer: {fileID: 0}
   Neptune:
     material: {fileID: 2100000, guid: 0aac6fd113bd2d144a119c76ff57890a, type: 2}
     name: "Nept\xFAn"
@@ -4306,6 +4470,7 @@ MonoBehaviour:
       distanceFromPlanetToRotateAroundInKilomters: 354800
       fact: "Triton objavil 10. okt\xF3bra 1846 britsk\xFD astron\xF3m William Lassell,
         len 17 dn\xED po objaven\xED samotn\xE9ho Nept\xFAna."
+    trailRenderer: {fileID: 0}
   Pluto:
     material: {fileID: 2100000, guid: 39a37c24dbe6ea943abcac4d775d21b0, type: 2}
     name: Pluto
@@ -4328,6 +4493,129 @@ MonoBehaviour:
       fact: "Ch\xE1ron je najv\xE4\u010D\u0161\xED z piatich mesiacov Pluta. Rovnak\xE9
         povrchy Ch\xE1rona a Pluta s\xFA v\u017Edy oproti sebe, jav naz\xFDvan\xFD
         viazan\xE1 rot\xE1cia."
+    trailRenderer: {fileID: 0}
+--- !u!96 &1963437076
+TrailRenderer:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963437073}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 2
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Time: 14.79
+  m_PreviewTimeScale: 1
+  m_Parameters:
+    serializedVersion: 3
+    widthMultiplier: 1
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.06605751
+        value: 0
+        inSlope: -0.12635282
+        outSlope: -0.12635282
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.360056
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.1732558
+        value: 1
+        inSlope: -3.192397
+        outSlope: -3.192397
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.017332923
+        outWeight: 0.12026584
+      - serializedVersion: 3
+        time: 0.7592905
+        value: 0
+        inSlope: -0.7413751
+        outSlope: -0.7413751
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.18901367
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      key1: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_ColorSpace: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 0
+    textureScale: {x: 1, y: 1}
+    shadowBias: 0.5
+    generateLightingData: 1
+  m_MinVertexDistance: 2.41
+  m_MaskInteraction: 0
+  m_Autodestruct: 0
+  m_Emitting: 1
+  m_ApplyActiveColorSpace: 1
 --- !u!4 &2063080605 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 609710574599968172, guid: fab926ee0f050a142b4d20787f47fa46, type: 3}
@@ -4612,3 +4900,4 @@ SceneRoots:
   - {fileID: 1167958950}
   - {fileID: 1053590923}
   - {fileID: 543450653627598946}
+  - {fileID: 414917708}
