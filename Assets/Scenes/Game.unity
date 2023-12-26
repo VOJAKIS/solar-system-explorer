@@ -1071,7 +1071,7 @@ TrailRenderer:
     textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 1
-  m_MinVertexDistance: 2.41
+  m_MinVertexDistance: 100
   m_MaskInteraction: 0
   m_Autodestruct: 0
   m_Emitting: 1
