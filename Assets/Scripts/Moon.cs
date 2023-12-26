@@ -30,7 +30,6 @@ public class Moon
 		CreateWrapper();
 		CreateSphere();
 		AddTrailComponent();
-
 	}
 
 	void AddTrailComponent()
